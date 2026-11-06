@@ -1,0 +1,54 @@
+# --- Data (never commit raw or processed data) ---
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# --- ML artefacts ---
+mlruns/
+mlartifacts/
+*.pkl
+*.joblib
+*.cbm
+
+# Parquet is ignored everywhere except small test fixtures
+*.parquet
+!tests/fixtures/**/*.parquet
+
+# --- Scratch space ---
+scratchpad/
+.scratch/
+
+# --- Secrets / env ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# --- Node / frontend ---
+node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
